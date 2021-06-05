@@ -14,6 +14,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import TermsAndCondition from './TermsCondition';
 
 import {VideoPlayerCon} from './VideoPlayerCon';
+import MovieDetails from '../views/MovieDetails';
+import MovieMain from '../views/MovieMain';
 
 
  export function HomeScreen({ navigation }) {
@@ -193,13 +195,44 @@ function videoScreen({navigation}){
 
        </View>
        
-       <VideoPlayerCon  style={{ flex:1, justifyContent:'center', marginTop:5}}/>
+       <MovieMain  style={{ flex:1, justifyContent:'center', marginTop:5}}/>
        
 
 </View>
      
   )
 }
+
+function movieDetailsScreen({navigation}){
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+
+  <View style={styles.view}>
+          
+          <Icon
+          style={{marginTop:30,
+            marginLeft:3,
+            
+            }}  
+          onPress={() => navigation.openDrawer()}  
+          name="md-menu"  
+          size={40}  
+          />
+          <Header  style={{ }}/>
+
+          
+
+       </View>
+       
+       <MovieDetails style={{ flex:1, justifyContent:'center', marginTop:50}}/>
+       
+
+</View>
+     
+  )
+}
+
+
 
 
 const Drawer = createDrawerNavigator();
@@ -214,6 +247,7 @@ const MyDrawer = ()=> {
         <Drawer.Screen name="Logout" component={logOutScreen} />
         <Drawer.Screen name="Terms & Condition" component={termsAndCondition} />
         <Drawer.Screen name="Video Player" component={videoScreen} />
+        <Drawer.Screen name="Movie Details" component={movieDetailsScreen} />
       </Drawer.Navigator>
    // </NavigationContainer>
   );

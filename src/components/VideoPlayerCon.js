@@ -33,7 +33,7 @@ export const VideoPlayerCon = () => {
     return (
        
 
-        <View style={styles.container}>
+        //<View style={styles.container}>
 
 
 
@@ -58,10 +58,8 @@ export const VideoPlayerCon = () => {
           
           
         />
-        <View style={styles.buttons}>
-          
-        </View>
-      </View>
+       
+      // </View>
     );
 };
 
@@ -77,16 +75,17 @@ const styles = StyleSheet.create({
     },
     
       video: {
-          flex:1,
+          
+          
          
         position: 'absolute',
         top: 0,
         left: 0,
-        bottom: 0,
+        
         right: 0,
         
         width: '100%',
-        height: 380,
+        height: 200,
         
         
       },
