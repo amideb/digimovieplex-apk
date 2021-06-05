@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "DIGI MOVIEPLEX",
+    "slug": "ott-react-native",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/and-logo.png",
+    "splash": {
+      "image": "./assets/cinema.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/and-logo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.magnox"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
