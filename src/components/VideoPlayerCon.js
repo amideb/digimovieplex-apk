@@ -10,7 +10,7 @@ import { Video, AVPlaybackStatus } from 'expo-av';
 
 
 // create a component
-export const VideoPlayerCon = () => {
+export const VideoPlayerCon = (props) => {
 
     const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
@@ -41,9 +41,11 @@ export const VideoPlayerCon = () => {
         
           ref={video}
           style={styles.video}
-          source={{
+         /*  source={{
             uri: 'http://api3.digimovieplex.com/upload/video/1621017122988-OTT_S4-Teen%20er%20Namta%20Final%20Movie.mov',
-          }}
+          }} */
+
+          source={props.movieUrl}
           onReadyForDisplay ={status => setStatus(() => status)}
           //useNativeControls
           resizeMode="contain"

@@ -36,9 +36,15 @@ import TVSeries from './src/views/TVSeries';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import LoginDone from './src/views/LoginDone';
+
 import  HomeScreen  from './src/components/Drawer'
 import LoginForm from './src/views/Login';
+import LoginFun from './src/components/LoginFun';
+import ForgotPass from './src/views/ForgotPassword';
+import Profile from './src/views/Profile';
+import MovieDetails from './src/views/MovieDetails';
+import MovieGrid from './src/components/MovieGrid';
+import MovieGridApi from './src/components/MovieGridApi';
 
 const Stack = createStackNavigator();
 
@@ -114,8 +120,16 @@ const App = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}  initialRouteName="Home">
       
         <Stack.Screen name="Home" component={nav} />
-        <Stack.Screen name="LoginDone" component={LoginDone} />
-        <Stack.Screen name="LoginForm" component={LoginForm} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="LoginFun" component={LoginFun} />
+        <Stack.Screen name="ForgotPass" component={ForgotPass} />
+
+        <Stack.Screen name="MovieDetails" component={MovieDetails} />
+
+
+        <Stack.Screen name="MovieGrid" component={MovieGrid} />
+
+        <Stack.Screen name="MovieGridApi" component={MovieGridApi} />
         
       </Stack.Navigator>
     </NavigationContainer>

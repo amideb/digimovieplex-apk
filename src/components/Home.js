@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 
 
 // create a component
-const Home = () => {
+const Home = ({navigation, props, route}) => {
 
     const [active, setActive] = React.useState('');
     return (

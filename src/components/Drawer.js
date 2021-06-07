@@ -16,6 +16,9 @@ import TermsAndCondition from './TermsCondition';
 import {VideoPlayerCon} from './VideoPlayerCon';
 import MovieDetails from '../views/MovieDetails';
 import MovieMain from '../views/MovieMain';
+import LoginFun from './LoginFun';
+
+import Profile from '../views/Profile';
 
 
  export function HomeScreen({ navigation }) {
@@ -242,12 +245,16 @@ const MyDrawer = ()=> {
     // <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Login" component={LoginScreen} />
+       {/*  <Drawer.Screen name="Login" component={LoginScreen} /> */}
         <Drawer.Screen name="Signup" component={SignUpScreen} />
         <Drawer.Screen name="Logout" component={logOutScreen} />
         <Drawer.Screen name="Terms & Condition" component={termsAndCondition} />
-        <Drawer.Screen name="Video Player" component={videoScreen} />
-        <Drawer.Screen name="Movie Details" component={movieDetailsScreen} />
+        {/* <Drawer.Screen name="Video Player" component={videoScreen} /> */}
+        {/* <Drawer.Screen name="Movie Details" component={movieDetailsScreen} /> */}
+
+        <Drawer.Screen name="Login" component={LoginFun} />
+
+        <Drawer.Screen name="Profile" component={Profile} />
       </Drawer.Navigator>
    // </NavigationContainer>
   );

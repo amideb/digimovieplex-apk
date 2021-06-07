@@ -1,46 +1,92 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, StatusBar} from 'react-native';
+import Header from '../components/Header';
 import { VideoPlayerCon } from '../components/VideoPlayerCon';
 
+import Icon from 'react-native-vector-icons/Ionicons'; 
+
+
+
 // create a component
-const MovieDetails = () => {
+const MovieDetails = ({navigation, route}) => {
+
+  //  const { movie } = route.movie;
+
+  const { movie } = route.params;
+
+  const { movieUrl } = route.params;
+
+    //console.log(props.movie.num_movie_id)
+
+    
+
+    
+
+    //console.log(`Hi ${movie.num_movie_id} `)
     return (
-        <View style={styles.container}>
-            <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}> 
-            <VideoPlayerCon style={styles.video} />
-            </View>
-           
 
-           <ScrollView style={{marginTop:250, }}>
-           
-       <View style={{backgroundColor:'#d3d3d3', margin:10, width:'95%', borderRadius:10,}}> 
-       <Text style={{fontWeight: 'bold', fontSize: 20, textAlign:'center', margin:3}} >Bhuban Babur Abhigyata | ভুবন বাবুর অভিজ্ঞতা</Text>
+        <View style={{ flex:1, justifyContent:'center', marginTop:15}}>
 
-        </View>
-           
-           <View style={{backgroundColor:'#d3d3d3', margin:10, width:'95%', borderRadius:10,}}>
-            <Text style={{textAlign:'center', margin:25}}>Seemabaddha is a bengali short film on a little boy who lives in a joint family. It shows how he spends his time during this pandemic. This movie has a very important message at the end.  </Text>
-            </View>
-           
-           
 
-           <View style={{backgroundColor:'#d3d3d3', margin:10, width:'95%', borderRadius:10,}}> 
-           <Text style={{textAlign:'center', margin:10}} >Directed By: Abhijit Roy</Text>
-           <Text style={{textAlign:'center', marginBottom:10}}>Produced By: Nirmitee Vigor Exertainment</Text>
-
-          </View>
-
-           <TouchableOpacity style={{backgroundColor:"rgba(208,2,27,1)", height:40, margin:10, width:'95%', borderRadius:10,}}>
-          <Text style={{fontWeight: 'bold', fontSize: 20, textAlign:'center', margin:3, color: "rgba(255,255,255,1)"}}>BUY TICKET</Text>
-
-          </TouchableOpacity>
+          <View style={{flex: 0.1, flexDirection:'row', } }>
+          
+     
 
           
 
-           </ScrollView>
-           
+       </View>
+       
+
+
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+
+      
+
+
+            
+       <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center', width:'100%'}}> 
+        <VideoPlayerCon movieUrl={movieUrl}  style={styles.video} />
         </View>
+
+
+<ScrollView style={{marginTop:220, }}>
+
+<View style={{backgroundColor:'#d3d3d3', margin:10, width:'95%', borderRadius:10,}}> 
+<Text style={{fontWeight: 'bold', fontSize: 20, textAlign:'center', margin:3}} >{movie.txt_movie_title}</Text>
+
+</View>
+
+<View style={{backgroundColor:'#d3d3d3', margin:10, width:'95%', borderRadius:10,}}>
+<Text style={{textAlign:'center', margin:25}}>{movie.txt_synopsis}</Text>
+</View>
+
+
+
+<View style={{backgroundColor:'#d3d3d3', margin:10, width:'95%', borderRadius:10,}}> 
+<Text style={{textAlign:'center', margin:10}} >Directed By: {movie.txt_director}</Text>
+<Text style={{textAlign:'center', marginBottom:10}}>Produced By:{movie.txt_producer}</Text>
+
+</View>
+
+<TouchableOpacity style={{backgroundColor:"rgba(208,2,27,1)", height:40, margin:10, width:'95%', borderRadius:10,}}>
+<Text style={{fontWeight: 'bold', fontSize: 20, textAlign:'center', margin:3, color: "rgba(255,255,255,1)"}}>BUY TICKET : {movie.num_movie_price_inr}</Text>
+
+</TouchableOpacity>
+
+
+
+</ScrollView>
+
+</View>
+
+
+
+
+
+
+        </View>
+       
     );
 };
 
@@ -53,6 +99,7 @@ const styles = StyleSheet.create({
     },
     video:{
         marginBottom:20,
+        width:'100%'
         
     },
     

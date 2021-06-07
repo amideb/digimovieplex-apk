@@ -20,7 +20,7 @@ import { StackNavigator } from 'react-navigation';
 
 
 import AppButton from '../components/AppButton'
-import LoginDone from './LoginDone';
+
 
 
 import { withNavigation } from 'react-navigation';
