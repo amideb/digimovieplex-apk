@@ -19,6 +19,8 @@ import MovieMain from '../views/MovieMain';
 import LoginFun from './LoginFun';
 
 import Profile from '../views/Profile';
+import ChangePass from '../views/ChangePassword';
+import UpdateProfileApi from './UpdateProfileApi';
 
 
  export function HomeScreen({ navigation }) {
@@ -255,6 +257,10 @@ const MyDrawer = ()=> {
         <Drawer.Screen name="Login" component={LoginFun} />
 
         <Drawer.Screen name="Profile" component={Profile} />
+
+        <Drawer.Screen name="Change Pass" component={ChangePass} />
+
+        <Drawer.Screen name="Update Profile" component={UpdateProfileApi} />
       </Drawer.Navigator>
    // </NavigationContainer>
   );
@@ -270,7 +276,8 @@ const styles = StyleSheet.create({
   banner:{
     
     height:20,
-    marginTop:20
+    marginTop:20,
+    marginEnd:15
   },
   scrollView: {
     flex:2,
