@@ -71,8 +71,10 @@ export default class BannerSlide extends Component {
           
 
       <View >
-          <SliderBox 
-          
+          <SliderBox
+          autoplay 
+          circleLoop
+          autoplayInterval={8000}
           style={styles.box}
          
             images={this.state.images}
