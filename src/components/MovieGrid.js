@@ -77,7 +77,7 @@ const MovieGrid = (props) => {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        alignSelf: "flex-start",
+        //alignSelf: "flex-start",
       }}
     >
       <View style={styles.buttonStack}>
@@ -129,11 +129,11 @@ const styles = StyleSheet.create({
     flex: 1.3,
   },
   title: {
-    flex: 2.2,
+    flex: 3,
 
     color: "rgba(255,255,255,1)",
 
-    fontSize: 18,
+    fontSize: 13,
     marginTop: 3,
 
     justifyContent: "center",
@@ -141,12 +141,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   shortFilm: {
-    flex: 1.5,
+    flex: 2,
 
     color: "rgba(255,255,255,1)",
     justifyContent: "center",
 
-    fontSize: 13,
+    fontSize: 11,
 
     marginTop: 4,
     marginLeft: 8,
@@ -158,7 +158,8 @@ const styles = StyleSheet.create({
 
     color: "rgba(255,255,255,1)",
 
-    marginTop: 5,
+    marginTop: 3,
+    fontSize: 11,
 
     textAlign: "center",
   },
@@ -167,13 +168,14 @@ const styles = StyleSheet.create({
 
     color: "rgba(255,255,255,1)",
     height: 35,
+    fontSize: 11,
 
     marginTop: 5,
 
     textAlign: "center",
   },
   rect: {
-    flex: 0.3,
+    flex: 0.4,
 
     backgroundColor: "rgba(208,2,27,1)",
     marginTop: 2,
@@ -190,8 +192,8 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,1)",
   },
   buttonStack: {
-    width: 190,
-    height: 320,
+    width: 170,
+    height: 215,
     padding: 8,
     marginTop: 5,
     backgroundColor: "#282c34",
